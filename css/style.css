@@ -267,7 +267,8 @@ header h1, #main section, footer p {
 }
 
 #main {
-    background: none repeat scroll 0 0 #111111;
+    background: #111111;
+    background: #eee;
     color: #DDDDDD;
 }
 
@@ -286,6 +287,7 @@ header h1, #main section, footer p {
 
 #main p {
     color: #AAAAAA;
+    color: #333;
     font-size: 108%;
 }
 
