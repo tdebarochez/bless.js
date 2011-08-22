@@ -67,10 +67,17 @@
                     <h3>Help!</h3>
                     <p>Relax. <a title="" target="_blank" href="http://github.com/paulyoung/bless.js">Download bless</a> and you're all set. Or alternatively:</p>
                     <pre>$ npm install bless</pre>
-                    <p>Then simply pass in a CSS file and your stylesheet will be split into the minimum number of files necessary to keep you out of trouble. If you're already below the limit, no action is taken.</p>
+                </div>
+                <div>
+                    <h3>Usage</h3>
+                    <p>Pass in a CSS file and your stylesheet will be split into the minimum number of files necessary to keep you out of trouble. If you're already below the limit, no action is taken.</p>
                     <pre>$ blessc style.css</pre>
-                    <p>There's no need to change your markup to include any additional files. @import directives are added to the file you originally provided.</p>
-                    <p>If you removed some styling since you last ran bless, you may now require fewer CSS files. Any previously generated files which are no longer needed are removed by default.</p>
+                    <p>To preserve your original file, you can output to a new set of files by passing in a destination filename.</p>
+                    <pre>$ blessc style.css blessed.css</pre>
+                    <p>There's no need to change your markup to include any additional files. @import directives are added to the file you originally provided. Pass in the -x option to 'minify' those statements.</p>
+                    <pre>$ blessc style.css -x</pre>
+                    <p>If you removed some styling since you last ran bless, you may now require fewer CSS files. Any previously generated files which are no longer needed are removed by default. Disable by passing in the -n option.</p>
+                    <pre>$ blessc style.css -n</pre>
                 </div>
                 <div>
                     <h3>Why the weird name?</h3>
