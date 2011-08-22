@@ -225,7 +225,9 @@ p {
 }
 
 pre {
-    margin: 20px 20px 40px;
+    background: #2e2e2e;
+    margin: 20px 0 40px;
+    padding: 12px 10px 10px;
 }
 
 header {
