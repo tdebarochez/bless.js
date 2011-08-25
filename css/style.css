@@ -213,7 +213,7 @@ td { vertical-align: top; }
 
 body {
     background: none repeat scroll 0 0 #222222;
-    font-family: "Courier New",monospace;
+    font-family: "Helvetica", sans-serif;
 }
 
 h3 {
@@ -224,52 +224,85 @@ p {
     margin: 0 0 20px;
 }
 
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
 pre {
     background: #2e2e2e;
+    color: #eee;
+    font-size: 123.1%;
     margin: 20px 0 40px;
-    padding: 12px 10px 10px;
+    padding: 22px 20px 20px;
 }
 
 header {
+    background: #ebebeb;
+    border-bottom: 1px solid #999;
     padding: 100px 0;
 }
 
+
+header #logo,
 header h1 {
-    font-size: 1540%;
-    font-weight: normal;
-    text-align: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-indent: -999em;
+    text-align: left;
 }
 
-header {
-    background: none repeat scroll 0 0 #161111;
-    border-bottom: 1px solid #554444;
+header #logo {
+    background-image: url('../img/logo.png');
+    height: 230px;
+    margin: 0 auto;
+    width: 259px;
 }
 
-header h1, a, a:link, a:visited, #main h3 {
-    color: #773333;
+header h1 {
+    background-image: url('../img/bless.png');
+    height: 28px;
+    margin: 10px auto 0;
+    width: 81px;
 }
 
-a:hover, a:active {
-    color: #993333;
+header h1 span:first-child + span {
+    font-size: 140%;
+    letter-spacing: 7px;
+    padding: 50px 10px 0;
+    vertical-align: middle;
+}
+
+a, a:link, a:visited, #main h3 {
+    color: #f24671;
 }
 
 header h2 {
-    color: #DDDDDD;
+    color: #ddd;
     font-size: 182%;
     font-weight: normal;
     margin: 0 0 10px;
     text-align: center;
 }
 
-header h1, #main section, footer p {
+#main section, footer p {
     margin: 0 auto;
     width: 960px;
 }
 
 #main {
-    background: #111111;
     background: #ddd;
-    color: #DDDDDD;
+    border-top: 1px solid #fff;
 }
 
 #main section {
@@ -281,22 +314,20 @@ header h1, #main section, footer p {
 }
 
 #main h3 {
-    font-size: 123.1%;
+    font-size: 153.9%;
     font-weight: normal;
 }
 
 #main p {
-    color: #AAAAAA;
+    color: #aaa;
     color: #333;
-    font-size: 108%;
-}
-
-footer {
-    border-top: 1px solid #444444;
+    font-size: 123.1%;
+    line-height: 1.6;
 }
 
 footer p {
-    color: #DDDDDD;
+    color: #ddd;
+    font-size: 108%;
     padding: 50px;
     text-align: center;
 }
@@ -4398,18 +4429,8 @@ footer p {
 #test4094 { background-color: red; }
 #test4095 { background-color: red; }
 
-
-header {
-    background: none repeat scroll 0 0 #111611;
-    border-bottom: 1px solid #445544;
-}
-
-header h1, a, a:link, a:visited, #main h3 {
-    color: #337733;
-}
-
-a:hover, a:active {
-    color: #339933;
+a, a:link, a:visited, #main h3 {
+    color: #1e98bc;
 }
 
 /* ==|== non-semantic helper classes ========================================
