@@ -58,11 +58,8 @@ p{margin:0 0 20px;}
 a,a:link,a:visited{text-decoration:none;}
 a:hover,a:active{text-decoration:underline;}
 pre{background:#2e2e2e;color:#eee;font-size:123.1%;margin:20px 0 60px;padding:22px 20px 20px;}
-header{background:#ebebeb;border-bottom:1px solid #999;padding:75px 0;}
-header #logo,header h1{background-color:transparent;background-repeat:no-repeat;border:0;direction:ltr;display:block;overflow:hidden;text-indent:-999em;text-align:left;}
-header #logo{background-image:url('../img/logo.png');height:230px;margin:0 auto;width:259px;}
-header h1{background-image:url('../img/bless.png');height:28px;margin:25px auto 0;width:81px;}
-header h1 span:first-child+span{font-size:140%;letter-spacing:7px;padding:50px 10px 0;vertical-align:middle;}
+header{background:#ebebeb;border-bottom:1px solid #999;padding:67px 0;}header h1{margin:0;text-align:center;}header h1 a{display:inline-block;margin:0 auto;}.ie7 header h1 a{display:inline;zoom:1;}
+header h1 a span{background-color:transparent;background-repeat:no-repeat;border:0;cursor:pointer;direction:ltr;display:block;overflow:hidden;text-indent:-999em;text-align:left;}header h1 a span:first-child{background-image:url('../img/logo.png');height:230px;margin:0;width:259px;}header h1 a span:first-child+span{background-image:url('../img/bless.png');height:28px;margin:25px auto 0;width:81px;}
 a,a:link,a:visited,#maincolumn h3{color:#f24671;}
 #main{background:#ddd;border-top:1px solid #fff;padding:0 20px 50px;}
 #maincolumn,#sidebar{padding:50px 0 0;}

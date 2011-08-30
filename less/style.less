@@ -253,40 +253,48 @@ pre {
 header {
     background: #ebebeb;
     border-bottom: 1px solid #999;
-    padding: 75px 0;
-}
-
-header #logo,
-header h1 {
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: 0;
-    direction: ltr;
-    display: block;
-    overflow: hidden;
-    text-indent: -999em;
-    text-align: left;
-}
-
-header #logo {
-    background-image: url('../img/logo.png');
-    height: 230px;
-    margin: 0 auto;
-    width: 259px;
-}
-
-header h1 {
-    background-image: url('../img/bless.png');
-    height: 28px;
-    margin: 25px auto 0;
-    width: 81px;
-}
-
-header h1 span:first-child + span {
-    font-size: 140%;
-    letter-spacing: 7px;
-    padding: 50px 10px 0;
-    vertical-align: middle;
+    padding: 67px 0;
+    
+    h1 {
+        margin: 0;
+        text-align: center;
+        
+        a {
+            display: inline-block;
+            margin: 0 auto;
+            
+            .ie7 & {
+                display: inline;
+                zoom: 1;
+            }
+            
+            span {
+                background-color: transparent;
+                background-repeat: no-repeat;
+                border: 0;
+                cursor: pointer;
+                direction: ltr;
+                display: block;
+                overflow: hidden;
+                text-indent: -999em;
+                text-align: left;
+                
+                &:first-child {
+                    background-image: url('../img/logo.png');
+                    height: 230px;
+                    margin: 0;
+                    width: 259px;
+                    
+                    + span {
+                        background-image: url('../img/bless.png');
+                        height: 28px;
+                        margin: 25px auto 0;
+                        width: 81px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 a, a:link, a:visited, #maincolumn h3 {
@@ -327,7 +335,7 @@ a, a:link, a:visited, #maincolumn h3 {
             
             .ie7 & {
                 display: inline;
-                zoom: 1
+                zoom: 1;
             }
             
             + strong {
@@ -336,7 +344,7 @@ a, a:link, a:visited, #maincolumn h3 {
                 
                 .ie7 & {
                     display: inline;
-                    zoom: 1
+                    zoom: 1;
                 }
             }
         }
