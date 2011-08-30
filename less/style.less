@@ -320,6 +320,32 @@ a, a:link, a:visited, #maincolumn h3 {
         font-size: 123.1%;
         line-height: 1.6;
     }
+    
+    #release-notes {
+        h3 {
+            display: inline-block;
+            
+            .ie7 & {
+                display: inline;
+                zoom: 1
+            }
+            
+            + strong {
+                display: inline-block;
+                margin: 0 0 0 5px;
+                
+                .ie7 & {
+                    display: inline;
+                    zoom: 1
+                }
+            }
+        }
+        
+        ul {
+            margin: 0 0 40px;
+            padding: 0 0 0 20px;
+        }
+    }
 }
 
 #sidebar {
@@ -327,7 +353,11 @@ a, a:link, a:visited, #maincolumn h3 {
         color: #333;
         font-size: 138.5%;
         font-weight: normal;
-        margin: 0 0 10px;
+        margin: 40px 0 10px;
+        
+        &:first-child {
+            margin-top: 0;
+        }
     }
     
     ul {
