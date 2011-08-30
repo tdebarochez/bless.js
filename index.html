@@ -164,7 +164,9 @@
     <![endif]-->
 
     <script>
-        addEventListener('load', function() { setTimeout(function(){window.scrollTo(0,1)}, 0); }, false);
+        if ('ontouchstart' in document.body) {
+            addEventListener('load', function() { setTimeout(function(){window.scrollTo(0,1)}, 0); }, false);
+        }
     </script>
 </body>
 </html>

@@ -120,5 +120,10 @@
     <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
   <![endif]-->
   
+  <script>
+      if ('ontouchstart' in document.body) {
+          addEventListener('load', function() { setTimeout(function(){window.scrollTo(0,1)}, 0); }, false);
+      }
+  </script>
 </body>
 </html>
