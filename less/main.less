@@ -54,13 +54,15 @@ header {
         text-align: center;
         
         a {
+            position: relative;
+            z-index: 1;
+            
             #logo {
                 display: inline-block;
                 margin: 0 auto;
             
                 .ie7 & {
                     display: block;
-                    position: relative;
                 }
             }
         }

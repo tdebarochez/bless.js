@@ -58,7 +58,7 @@ p{margin:0 0 20px;}
 a,a:link,a:visited{text-decoration:none;}
 a:hover,a:active{text-decoration:underline;}
 pre{background:#2e2e2e;color:#eee;font-size:123.1%;margin:20px 0 60px;padding:22px 20px 20px;}
-header{background:#e0e0e0 url('../img/header.png') center -236px no-repeat;margin:0 0 -88px;padding:88px 0 0;}header h1{margin:0;text-align:center;}header h1 a #logo{display:inline-block;margin:0 auto;}.ie7 header h1 a #logo{display:block;position:relative;}
+header{background:#e0e0e0 url('../img/header.png') center -236px no-repeat;margin:0 0 -88px;padding:88px 0 0;}header h1{margin:0;text-align:center;}header h1 a{position:relative;z-index:1;}header h1 a #logo{display:inline-block;margin:0 auto;}.ie7 header h1 a #logo{display:block;}
 a,a:link,a:visited,#maincolumn h3,#sidebar ul li a:hover{color:#f24671;}
 #main{background:#ffffff url('../img/main.png') center top repeat-x;padding:0 20px 50px;}#main.no-headline #maincolumn,#main.no-headline #sidebar{padding-top:153px;}
 #main .center #headline{display:block;margin:130px auto 0;}
