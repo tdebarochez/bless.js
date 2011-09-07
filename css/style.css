@@ -69,7 +69,7 @@ a,a:link,a:visited,#maincolumn h3,#sidebar ul li a:hover{color:#f24671;}
 #maincolumn p{color:#aaa;color:#333;font-size:123.1%;line-height:1.6;}
 #maincolumn #release-notes h3{display:inline-block;}.ie7 #maincolumn #release-notes h3{display:inline;zoom:1;}
 #maincolumn #release-notes h3+strong{color:#666;display:inline-block;margin:0 0 0 5px;}.ie7 #maincolumn #release-notes h3+strong{display:inline;zoom:1;}
-#maincolumn #release-notes ul{margin:0 0 40px;padding:0 0 0 20px;}#maincolumn #release-notes ul li{font-size:108%;}
+#maincolumn #release-notes ul{margin:0 0 40px;padding:0 0 0 20px;}#maincolumn #release-notes ul li{font-size:108%;margin:5px 0 0;}
 #sidebar>div{display:inline-block;margin:40px 0 10px;vertical-align:top;}.ie7 #sidebar>div{display:inline;zoom:1;}
 #sidebar>div:first-child{margin-top:0;}
 #sidebar>div #downloads{margin:-4px 0 0;}
