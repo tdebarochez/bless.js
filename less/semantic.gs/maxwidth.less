@@ -1,3 +1,16 @@
+.sidebar() {
+    #sidebar {
+        > div {
+            width: 100%;
+            
+            #downloads,
+            #release-notes img {
+                width: 100%;
+            }
+        }
+    }
+}
+
 //////////
 // GRID //
 //////////
@@ -24,15 +37,46 @@ div.center {
 
 // main column & sidebar
 #maincolumn {
-	.column(9);
+	.column(8);
 }
+
 #sidebar {
-	.column(3);
+	.column(4);
+}
+
+@media screen and (max-width: 1024px) {
+    #container {
+        #main {
+    	    .center {
+    	        .sidebar();
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 720px) {
-	#maincolumn,
-	#sidebar {
-		.column(12);
-	}
+    #container {
+    	#main {
+    	    .center {
+        	    #headline {
+        	        width: 100%;
+        	    }
+	    
+        	    #tagline {
+        	        margin: 50px 0 0;
+	        
+        	        br {
+        	            display: none;
+        	        }
+        	    }
+        	    
+        	    #maincolumn,
+        	    #sidebar {
+        	        .column(12);
+        	    }
+        	    
+        	    .sidebar();
+        	}
+    	}
+    }
 }

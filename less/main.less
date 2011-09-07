@@ -1,0 +1,239 @@
+.inline-block() {
+    display: inline-block;
+    
+    .ie7 & {
+        display: inline;
+        zoom: 1;
+    }
+}
+
+.size(@width: auto, @height: auto) {
+    height: @height;
+    width: @width;
+}
+
+body {
+    background: none repeat scroll 0 0 #222222;
+    font-family: "Helvetica", sans-serif;
+}
+
+h3 {
+    margin: 0 0 5px;
+}
+
+p {
+    margin: 0 0 20px;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+pre {
+    background: #2e2e2e;
+    color: #eee;
+    font-size: 123.1%;
+    margin: 20px 0 60px;
+    padding: 22px 20px 20px;
+}
+
+header {
+    background: #e0e0e0 url('../img/header.png') center -236px no-repeat;
+    margin: 0 0 -88px;
+    padding: 88px 0 0;
+    
+    h1 {
+        margin: 0;
+        text-align: center;
+        
+        a {
+            .ir();
+            .size(385px, 233px);
+            background: url('../img/icon.png');
+            cursor: pointer;
+            display: inline-block;
+            margin: 0 auto;
+            
+            .ie7 & {
+                display: block;
+                position: relative;
+            }
+        }
+    }
+}
+
+a,
+a:link,
+a:visited,
+#maincolumn h3,
+#sidebar ul li a:hover {
+    color: #f24671;
+}
+
+#main {
+    background: #fff url('../img/main.png') center top repeat-x;
+    padding: 0 20px 50px;
+    
+    &.no-headline {
+        #maincolumn,
+        #sidebar {
+            padding-top: 153px;
+        }
+    }    
+    
+    .center {
+        #headline {
+            display: block;
+            margin: 130px auto 0;
+        }
+        
+        #tagline {
+            color: #999;
+            font-size: 123.1%;
+            line-height: 189%;
+            margin: 20px 0 0;
+            text-align: center;
+        }
+    }
+}
+#maincolumn,
+#sidebar {
+    padding: 75px 0 0;
+}
+
+#maincolumn {
+    div + div {
+        margin: 40px 0 0;
+    }
+    
+    h3 {
+        font-size: 153.9%;
+        font-weight: normal;
+    }
+    
+    p {
+        color: #aaa;
+        color: #333;
+        font-size: 123.1%;
+        line-height: 1.6;
+    }
+    
+    #release-notes {
+        h3 {
+            .inline-block();
+            
+            + strong {
+                color: #666;
+                display: inline-block;
+                margin: 0 0 0 5px;
+                
+                .ie7 & {
+                    display: inline;
+                    zoom: 1;
+                }
+            }
+        }
+        
+        ul {
+            margin: 0 0 40px;
+            padding: 0 0 0 20px;
+        }
+    }
+}
+
+#sidebar {
+    > div {
+        .inline-block();
+        margin: 40px 0 10px;
+        vertical-align: top;
+        
+        &:first-child {
+            margin-top: 0;
+        }
+        
+        #downloads {
+            //display: block;
+            margin: -4px 0 0;
+        }
+        
+        #release-notes {
+            img {
+                margin: -4px 0 0;
+                
+                &:first-child {
+                    display: inline;
+                    
+                    + img {
+                        display: none;
+                    }
+                }
+            }
+            
+            &:hover {
+                img {
+                    &:first-child {
+                        display: none;
+
+                        + img {
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+    
+        p {
+            color: #666;
+        }
+    
+        ul {
+            list-style: none;
+            margin: 20px 0 0 30px;
+            padding: 0;
+        
+            li {
+                a {
+                    color: #666;
+                    font-size: 123.1%;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+            
+                span {
+                    color: #999;
+                    display: block;
+                    font-size: 108%;
+                }
+            
+                + li {
+                    margin: 20px 0 0;
+                }
+            }
+        }
+    }
+}
+
+footer p {
+    color: #ddd;
+    font-size: 108%;
+    margin: 0;
+    padding: 50px;
+    text-align: center;
+}
+
+@import url('test.less');
+
+a,
+a:link,
+a:visited,
+#maincolumn h3,
+#sidebar ul li a:hover {
+    color: #279dd9;
+}
