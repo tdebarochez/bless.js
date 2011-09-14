@@ -1,0 +1,95 @@
+.sidebar() {
+    #sidebar {
+        > div {
+            width: 100%;
+            
+            #downloads,
+            #release-notes img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+//////////
+// GRID //
+//////////
+
+// Specify the number of columns and set column and gutter widths
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+
+// Remove the definition below for a pixel-based layout
+@total-width: 100%;
+
+
+////////////
+// LAYOUT //
+////////////
+
+// center the contents
+div.center {
+	max-width: 1140px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+// main column & sidebar
+#maincolumn {
+	.column(8);
+}
+
+#sidebar {
+	.column(4);
+}
+
+@media screen and (max-width: 1024px) {
+    #container {
+        #main {
+    	    .center {
+    	        .sidebar();
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #container {
+        header {
+            h1 {
+                a {
+                    #icon {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    	#main {
+    	    .center {
+        	    #headline {
+        	        width: 100%;
+        	    }
+	    
+        	    #headline {
+        	        margin-top: 145px;
+        	    }
+        	    
+        	    #tagline {
+        	        margin: 55px 0 0;
+	        
+        	        br {
+        	            display: none;
+        	        }
+        	    }
+        	    
+        	    #maincolumn,
+        	    #sidebar {
+        	        .column(12);
+        	    }
+        	    
+        	    .sidebar();
+        	}
+    	}
+    }
+}

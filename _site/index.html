@@ -1,0 +1,176 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+        More info: h5bp.com/b/378 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Bless</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+    <!-- CSS: implied media=all -->
+    <!-- CSS concatenated and minified via ant build script-->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- end CSS-->
+
+    <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+    <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+        Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+        For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+    <script src="/js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="/" title="">
+                    <img id="icon" src="/img/icon.png" alt="Bless" />
+                </a>
+            </h1>
+        </header>
+        <div role="main" id="main">
+            <div class="center">
+                <img id="headline" src="/img/headline.png" alt="Because after all these years, IE still sucks." />
+                <div id="tagline"> With modernizer & CSS3PIE you thought you had this one all figured out.<br/> Think again. CSS selector limit. Boom.</div>
+                <div role="maincolumn" id="maincolumn">
+                    <div>
+    <h3>So, what is it?</h3>
+    <p>Bless provides an elegant solution to a lesser-known bug in Internet Explorer which causes CSS to be completely ignored. It runs server-side and on your local machine with <a title="" target="_blank" href="http://nodejs.org">Node.js</a></p>
+</div>
+<div>
+    <h3>Say what?</h3>
+    <p>IE versions 6, 7, 8 &amp; 9 all have a limit on the number of selectors allowed in a single CSS file. Once the limit is reached, IE silently fails and just ignores any further CSS in the file leaving parts of your site totally unstyled.</p>
+    <p>File size, number of lines or amount of whitespace are irrelevant. Minifying CSS will not help you here.</p>
+</div>
+<div>
+    <h3>I've never come across this before...</h3>
+    <p>Chances are, so far you've worked on smaller scale sites and/or separated out CSS across multiple files. Once a project reaches a certain size however, there's no going back.</p>
+    <p>If you're using a CSS compiler such as <a title="" target="_blank" href="http://lesscss.org">Less</a>, <a title="" target="_blank" href="http://sass-lang.com">Sass</a> or <a title="" target="_blank" href="http://learnboost.github.com/stylus/">Stylus</a> it's likely that you're exporting everything to a single CSS file to reduce http hits. If your project is a substantial one or you're using a base template such as <a title="" target="_blank" href="http://html5boilerplate.com">HTML5 boilerplate</a>, you're a prime candidate to have come across this issue or will encounter it soon.</p>
+    <p>Check out this page in IE and you'll notice a visible difference. There are no special methods being used to target Internet Explorer - IE is simply ignoring the CSS which makes this page's color scheme blue.</p>
+</div>
+<div>
+    <h3>So what's the solution?</h3>
+    <p>Keep the number of selectors in a single file below the limit by splitting your CSS over multiple stylesheets.</p>
+    <p>Totally lame to manage manually, and unless you keep count of the number of selectors per file you'll probably end up taking additional http hits because you separated styling out into several files for organization or 'just in case'.</p>
+</div>
+<div>
+    <h3>Help!</h3>
+    <p>Relax. <a title="" target="_blank" href="http://github.com/paulyoung/bless.js">Download bless</a> and you're all set. Or alternatively:</p>
+    <pre>$ npm install bless</pre>
+</div>
+<div>
+    <h3>Usage</h3>
+    <p>Pass in a CSS file and your stylesheet will be split into the minimum number of files necessary to keep you out of trouble. If you're already below the limit, no action is taken.</p>
+    <pre>$ blessc style.css</pre>
+    <p>There's no need to change your markup to include any additional files. @import directives are added to the file you originally provided. Pass in the -x option to 'minify' those statements.</p>
+    <pre>$ blessc style.css -x</pre>
+    <p>If you removed some styling since you last ran bless, you may now require fewer CSS files. Any previously generated files which are no longer needed are removed by default. Disable by using the --no-cleanup option.</p>
+    <pre>$ blessc style.css --no-cleanup</pre>
+    <p>It's even possible to read from stdin for your input, which means you can pass the output from your favorite CSS compiler straight to bless by using '-' as your source.</p>
+    <pre>$ lessc source.less | blessc - output.css</pre>
+    <p>If you're not using one of the aforementioned CSS pre-processors but are going old school with straight up CSS, you probably don't want to mess with your source file. To preserve your original file, you can output to a new set of files by passing in a destination filename.</p>
+    <pre>$ blessc source.css output.css</pre>
+    <p>Check which version you're running.</p>
+    <pre>$ blessc -v</pre>
+</div>
+<div>
+    <h3>Is this going to slow down my workflow?</h3>
+    <p>The example.css file below contains 12,286 selectors. Bless splits it into 4 files in 0.19 seconds.</p>
+</div>
+<div>
+    <h3>Demo</h3>
+    <p>Download this <a href="https://github.com/downloads/paulyoung/bless.js/example.css" target="_blank" title="">example css file</a> and try it out.</p>
+</div>
+<div>
+    <h3>Why the weird name?</h3>
+    <p>It was born out of using Less, and seems an appropriate verb. You 'Fedex' parcels, 'Google' yourself and 'Bless' CSS files.</p>
+</div>
+<div>
+    <h3>This would be awesome as part of...</h3>
+    <p>If you want to integrate with Bless, please <a title="" target="_blank" href="http://twitter.com/paulyoungtv">contact me</a>.</p>
+    <p>There's already a basic <a href="https://github.com/downloads/paulyoung/bless.js/Bless.Mac.zip" target="_blank" title="">Mac app</a> available with <a href="http://growl.info" target="_blank" title="">Growl</a> support.</p>
+</div>
+                </div><div role="sidebar" id="sidebar">
+                    <div>
+                        <img id="downloads" src="/img/downloads.png" alt="Downloads" />
+                        <ul>
+                            <li>
+                                <a href="https://github.com/downloads/paulyoung/bless.js/Bless.Mac.zip" target="_blank" title="">Bless for Mac</a>
+                                <span>Basic drag and drop app</span>
+                            </li>
+                            <li>
+                                <a title="" target="_blank" href="https://github.com/paulyoung/bless.js">Bless.js</a>
+                                <span>View the project on GitHub</span>
+                            </li>
+                            <li>
+                                <a href="https://github.com/downloads/paulyoung/bless.js/example.css" target="_blank" title="">Example.css</a>
+                                <span>Download and try it out!</span>
+                            </li>
+                        </ul>
+                    </div><div>
+                        <a href="/release-notes" id="release-notes" title="">
+                            <img src="/img/release-notes.png" alt="Release Notes & Version History" />
+                            <img src="/img/release-notes-hover.png" alt="Release Notes & Version History" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Copyright &copy; Paul Young 2011</p>
+        </footer>
+    </div> <!-- end of #container -->
+
+
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+    <!--
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+    -->
+
+
+    <!-- scripts concatenated and minified via ant build script-->
+    <!--
+    <script defer src="../js/plugins.js"></script>
+    <script defer src="../js/script.js"></script>
+    -->
+    <!-- end scripts-->
+
+  
+    <!-- Change UA-XXXXX-X to be your site's ID -->
+    <script>
+        window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+            Modernizr.load({
+                load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+            });
+    </script>
+
+
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+         chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lt IE 7 ]>
+      <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+      <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
+
+    <script>
+        if ('ontouchstart' in document.body) {
+            addEventListener('load', function() { setTimeout(function(){window.scrollTo(0,1)}, 0); }, false);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+        More info: h5bp.com/b/378 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Bless | Release Notes</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+    <!-- CSS: implied media=all -->
+    <!-- CSS concatenated and minified via ant build script-->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- end CSS-->
+
+    <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+    <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+        Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+        For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+    <script src="/js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="/" title="">
+                    <img id="icon" src="/img/icon.png" alt="Bless" />
+                </a>
+            </h1>
+        </header>
+        <div role="main" id="main">
+            <div class="center">
+                <img id="headline" src="/img/headline.png" alt="Because after all these years, IE still sucks." />
+                <div id="tagline"> With modernizer & CSS3PIE you thought you had this one all figured out.<br/> Think again. CSS selector limit. Boom.</div>
+                <div role="maincolumn" id="maincolumn">
+                    <div id="release-notes">
+    <h3>Version 2.0.2</h3>
+    <strong>8 September 2011</strong>
+    <ul>
+        <li>Fixing pluralization for file and selector nouns in output messages.</li>
+    </ul>
+    <h3>Version 2.0.1</h3>
+    <strong>8 September 2011</strong>
+    <ul>
+        <li>Updated messaging to clarify that the source CSS file was modified.</li>
+        <li>Added basic check for .css file extension on input file.</li>
+        <li>Added number formatting to handle when the CSS selector count is over 3 figures.</li>
+    </ul>
+    <h3>Version 2.0.0</h3>
+    <strong>6 September 2011</strong>
+    <ul>
+        <li>Users are prompted to use the -f or --force option when attempting to modify the source file.</li>
+        <li>Messaging to stdout provides information on the number of selectors and files involved.</li>
+        <li>Files generated using bless are suffixed with '-blessed' to avoid conflicts with user created files.</li>
+        <li>-n option deprecated in favor of using the --no-cleanup option.</li>
+        <li>When using --no-cleanup, files which would have been removed now have their name suffixed with '-old'.</li>
+    </ul>
+    <h3>Version 1.1.2</h3>
+    <strong>30 August 2011</strong>
+    <ul>
+        <li>Correctly writing output file even if source file is below the selector limit or contains no selectors in order for cleanup to work properly.</li>
+    </ul>
+    
+    <h3>Version 1.1.1</h3>
+    <strong>26 August 2011</strong>
+    <ul>
+        <li>Properly handling when no output file is specified and using stdin as source.</li>
+    </ul>
+
+    <h3>Version 1.1.0</h3>
+    <strong>26 August 2011</strong>
+    <ul>
+        <li>Added support for reading from stdin.</li>
+        <li>Properly handling when no CSS selectors are found.</li>
+    </ul>
+
+    <h3>Version 1.0.5</h3>
+    <strong>23 August 2011</strong>
+    <ul>
+        <li>No longer modifying source file when under the selector limit.</li>
+    </ul>
+
+    <h3>Version 1.0.4</h3>
+    <strong>22 August 2011</strong>
+    <ul>
+        <li>Added single quotes to filenames in @import directives.</li>
+    </ul>
+
+    <h3>Version 1.0.3</h3>
+    <strong>22 August 2011</strong>
+    <ul>
+        <li>Fixed incorrect lib directory structure.</li>
+    </ul>
+
+    <h3>Version 1.0.2</h3>
+    <strong>22 August 2011</strong>
+    <ul>
+        <li>Removed lib files as git submodule since unsupported by GitHub downloads.</li>
+    </ul>
+
+    <h3>Version 1.0.1</h3>
+    <strong>22 August 2011</strong>
+    <ul>
+        <li>Added lib files as git submodule for easier integration with less.js</li>
+    </ul>
+
+    <h3>Version 1.0.0</h3>
+    <strong>22 August 2011</strong>
+    <ul>
+        <li>Initial release of bless.js</li>
+    </ul>
+</div>
+                </div><div role="sidebar" id="sidebar">
+                    <div>
+                        <img id="downloads" src="/img/downloads.png" alt="Downloads" />
+                        <ul>
+                            <li>
+                                <a href="https://github.com/downloads/paulyoung/bless.js/Bless.Mac.zip" target="_blank" title="">Bless for Mac</a>
+                                <span>Basic drag and drop app</span>
+                            </li>
+                            <li>
+                                <a title="" target="_blank" href="https://github.com/paulyoung/bless.js">Bless.js</a>
+                                <span>View the project on GitHub</span>
+                            </li>
+                            <li>
+                                <a href="https://github.com/downloads/paulyoung/bless.js/example.css" target="_blank" title="">Example.css</a>
+                                <span>Download and try it out!</span>
+                            </li>
+                        </ul>
+                    </div><div>
+                        <a href="/release-notes" id="release-notes" title="">
+                            <img src="/img/release-notes.png" alt="Release Notes & Version History" />
+                            <img src="/img/release-notes-hover.png" alt="Release Notes & Version History" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Copyright &copy; Paul Young 2011</p>
+        </footer>
+    </div> <!-- end of #container -->
+
+
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+    <!--
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+    -->
+
+
+    <!-- scripts concatenated and minified via ant build script-->
+    <!--
+    <script defer src="../js/plugins.js"></script>
+    <script defer src="../js/script.js"></script>
+    -->
+    <!-- end scripts-->
+
+  
+    <!-- Change UA-XXXXX-X to be your site's ID -->
+    <script>
+        window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+            Modernizr.load({
+                load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+            });
+    </script>
+
+
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+         chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lt IE 7 ]>
+      <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+      <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
+
+    <script>
+        if ('ontouchstart' in document.body) {
+            addEventListener('load', function() { setTimeout(function(){window.scrollTo(0,1)}, 0); }, false);
+        }
+    </script>
+</body>
+</html>
